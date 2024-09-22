@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "gilroy";
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+color: #fff;
+padding: 2vw 3vw;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vw;
+}
+.nleft{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 2vw;
+
+}
+.nright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#img-con{
+   width: 30vw;
+   height: 30vw;
+    background-color: red;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    border-radius: 50%;
+    background-image: url(img5.jpg);
+    background-size: cover;
+    background-position: 60% ;
+    position: relative;
+    z-index: 1;
+}
+#overlay{
+    font-size: 5vw;
+    width: 70%;
+    height: 30%;
+    color: beige;
+    opacity: 0.7;
+    position: absolute;
+  z-index: 0;
+  top: 68%; /* adjust the top position to your liking */
+  left: 5%
+    
+}
+ 
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* width: 50%; */
+    color: beige;
+    position: relative;
+    z-index: 1;
+    font-size: 1vw;
+  margin-top: -20vw;
+  width: 50%;
+  margin-left: 37vw;
+}
+
+.nright button{
+    display: none;
+
+    }
+.off-screen-menu{
+        display: none;
+    }
+    @media (max-width:600px) {
+        nav{
+            padding: 3vw 5vw;
+        }
+    .nright button{
+        display: block;
+        font-size: 2.5vw;
+        padding: 1vw 2vw;
+        background-color: rgb(0, 0, 0);
+        color: beige;
+        border: 1px solid beige;
+        font-family: "gilroy";
+        border-radius: 20px;
+        /* border: none; */
+        outline: none;
+        /* display: none; */
+        transition: all ease .3s;
+    }    
+    .nright button.active{
+        opacity: 0;
+        transition: all ease 0.3s;
+      
+
+    }    
+    .off-screen-menu{
+        display: block;
+        color: #000;
+        background-color: beige;
+        height: 100vh;
+        width: 30%;
+        position: fixed;
+        top: 0;
+        right: -50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all ease .3s ;
+        gap: 30px;
+        
+    }
+
+.off-screen-menu.active{
+    right: 0;
+    
+}
+    .nright a{
+        display: none;
+    }
+    #img-con{
+        margin-top: 30vw;
+        width: 50vw;
+        height: 50vw;
+    }
+    p{
+        margin-left: 60vw;
+        width: 30%;
+        margin-top: -39vw;
+        font-size: 2vw;
+    }
+    #overlay{
+        margin-top: -37vw;
+    }
+    }
